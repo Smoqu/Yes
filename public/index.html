@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="/socket.io/socket.io.js"></script>
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/messages.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>test messages</title>
+  </head>
+  <body>
+    <main>
+      <div id="messages"></div>
+      <form id="messagesForm">
+        <input type="text" name="msg" id="msg" />
+        <button type="submit" id="send">Send</button>
+      </form>
+    </main>
+  </body>
+</html>

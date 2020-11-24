@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: auto;
+  width: 50%;
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#messageDiv {
+  background-color: grey;
+  margin: 10px 0 10px 0;
+  display: flex;
+  gap: 10px;
+  padding: 0 10px 0 10px;
+  justify-content: space-between;
+  color: white;
+}
+
+#messagesForm {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  bottom: 0;
+}
+
+#messagesForm > input {
+  width: 100%;
+}
+
+#messages {
+  background-color: red;
+}
