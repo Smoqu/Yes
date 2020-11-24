@@ -16,6 +16,10 @@ app.use(express.static(path.join(__dirname, "public")));
 
 let users = [];
 
+app.get("/", (req, res) => {
+  res.send("Hi");
+});
+
 io.on("connection", (socket) => {
   socket.broadcast.emit("connectionState", `joined the chat`);
 
