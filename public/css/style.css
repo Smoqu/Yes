@@ -1,11 +1,12 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: rgb(27, 27, 27);
+  color: white;
 }
 
 main {
   margin: auto;
-  width: 50%;
 
   height: 100vh;
   display: flex;
@@ -14,13 +15,27 @@ main {
 }
 
 #messageDiv {
-  background-color: grey;
   margin: 10px 0 10px 0;
   display: flex;
+  flex-direction: column;
   gap: 10px;
   padding: 0 10px 0 10px;
   justify-content: space-between;
   color: white;
+  text-justify: justify;
+}
+
+#messageDiv > p {
+  margin: 0;
+}
+
+#msgReceived {
+  background-color: blue;
+  width: fit-content;
+  padding: 10px;
+  max-width: 50%;
+  overflow-wrap: break-word;
+  border-radius: 10px;
 }
 
 #messagesForm {
@@ -29,12 +44,44 @@ main {
   justify-content: space-around;
   position: relative;
   bottom: 0;
+  gap: 10px;
 }
 
-#messagesForm > input {
+#messagesForm > textarea {
   width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: 0;
+  overflow-y: auto;
+}
+
+#messagesForm > button {
+  border-radius: 10px;
+  border: 0;
+  display: flex;
+  align-items: center;
+}
+
+#messagesForm > button::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-image: url("https://www.flaticon.com/svg/static/icons/svg/2526/2526450.svg");
+  background-size: 20px;
+  background-repeat: no-repeat;
 }
 
 #messages {
-  background-color: red;
+  display: flex;
+  height: 100%;
+  overflow-y: scroll;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+@media only screen and (min-width: 1000px) {
+  main {
+    width: 50%;
+  }
 }

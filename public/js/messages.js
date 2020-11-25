@@ -9,7 +9,7 @@ messagesForm.addEventListener("submit", (e) => {
   const date = new Date();
   const hours = date.getHours();
   const minutes = date.getMinutes();
-  const dateMsgSent = `${hours}:${minutes}`;
+  const dateMsgSent = `${hours}:${minutes > 9 ? minutes : `0${minutes}`}`;
   const sendMsg = {
     user,
     msg: msg.value,
@@ -26,6 +26,8 @@ socket.on("receive", (value) => {
   const author = document.createElement("p");
   const message = document.createElement("p");
   const date = document.createElement("p");
+  
+  message.id = "msgReceived";
 
   date.innerText = value.date;
   author.innerText = value.user;
